@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Array Traversing and Accessing</title>
+</head>
+<body>
+    <input type="text" id="demo">
+    <button onclick="getElement()">Get Element by Index</button><br>
+    <script>
+        const array = [10,2,14,15,21,65,84,7,8,9,6,5,25,98];
+        let len = array.length;
+        for(let i = 0; i < len; i++){
+            document.write(`Array index: ${i} and value: ${array[i]} <br>`)
+        }
+
+        function getElement(){
+           let el = document.getElementById("demo").value;
+           if(el < len && typeof parseInt(el) === "number" && el > -1){
+            alert("Array value is: " + array[el]);
+           }
+           else{
+            alert("Put a valid Index")
+           }
+            
+        }
+    </script>
+</body>
+</html>
